@@ -21,9 +21,9 @@ let lang = {
         return translation;
     },
     getChosenLang:function(){
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        return (urlParams.has('l') && this.getAvailable().includes(urlParams.get('l'))) ? urlParams.get('l'): this.getDefault();
+        const queryString = window.location.pathname;
+        const urlParams = queryString.split("/");
+        return (this.getAvailable().includes(urlParams[1])) ? urlParams[1]: this.getDefault();
     },
     getLabel:function(label){
         let l = this.getChosenLang();

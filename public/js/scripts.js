@@ -4,7 +4,5 @@ document.title = l.getLabel('appTitle');
 
 $(function() {
     console.log( "jQuery is ready!" );
-
-    console.log(l.getChosenLang());
-
+    //console.log(l.getChosenLang());
 });
